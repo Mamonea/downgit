@@ -1,14 +1,11 @@
 /***********************************************************
 * Developer: Minhas Kamal (minhaskamal024@gmail.com)       *
 * Website: https://github.com/MinhasKamal/DownGit          *
-* License: MIT License                                     *
-***********************************************************/
+* License: MIT License                                     *                            ***********************************************************/
 
 var homeModule = angular.module('homeModule', [
-    'ngRoute',
-    'downGitModule',
-]);
-
+    'ngRoute',                                                                              'downGitModule',
+]);                                                                                     
 homeModule.config([
     '$routeProvider',
 
@@ -26,13 +23,12 @@ homeModule.config([
                 function($scope, $routeParams, $location, toastr, downGitService) {
                     $scope.downUrl = "";
                     $scope.url = "";
-                    $scope.isProcessing = {val: false};
-                    $scope.downloadedFiles = {val: 0};
+                    $scope.isProcessing = {val: false};                                                     $scope.downloadedFiles = {val: 0};
                     $scope.totalFiles = {val: 0};
 
                     var templateUrl = "https?://github.com/.+/.+";
                     var downloadUrlInfix = "#/home?url=";
-                    var downloadUrlPrefix = "https://minhaskamal.github.io/DownGit/"+downloadUrlInfix;
+                    var downloadUrlPrefix = "https://mamonea.github.io/downgit/"+downloadUrlInfix;
 
                     if ($routeParams.url) {
                         $scope.url = $routeParams.url;
